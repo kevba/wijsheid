@@ -64,6 +64,7 @@ header {
   min-height: 30vh;
   height: fit-content;
   width: 80%;
+  max-width: 800px;
   background-color: darkcyan;
   padding: 4rem;
   border-radius: 4rem;
