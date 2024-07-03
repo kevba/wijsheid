@@ -1,10 +1,17 @@
 import { ref, computed } from "vue";
 import { defineStore } from "pinia";
 
-export const useWisdomStore = defineStore("counter", () => {
-    const wisdoms = ref<string[]>(wisdomList);
-
-    return { wisdoms };
+export const useWisdomStore = defineStore("counter", {
+    state: () => ({
+        wisdoms: ref<string[]>(wisdomList),
+        activeWisdom: ref(""),
+    }),
+    actions: {
+        randomizeWisdom() {
+            const i = Math.floor(Math.random() * this.wisdoms.length);
+            this.activeWisdom = this.wisdoms[i];
+        },
+    },
 });
 
 const wisdomList = [
