@@ -3,7 +3,7 @@ import { useWisdomStore } from "./stores/wisdoms";
 import Card from "./components/Card.vue";
 
 const wisdomStore = useWisdomStore();
-wisdomStore.randomizeWisdom();
+wisdomStore.fetchWisdoms();
 </script>
 
 <template>
